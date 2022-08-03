@@ -6,3 +6,6 @@ class Pub:
 
     def increase_till(self, amount):
         self.till += amount
+
+    def check_age(self, customer):
+        return customer.age >= 18
