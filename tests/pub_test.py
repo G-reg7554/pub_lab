@@ -1,6 +1,7 @@
 import unittest
 from src.pub import Pub
 from src.customer import Customer
+from src.drink import Drink
 
 class TestPub(unittest.TestCase):
     def setUp(self):
@@ -10,8 +11,9 @@ class TestPub(unittest.TestCase):
         self.assertEqual("The Prancing Pony", self.pub.name)
 
     def test_increase_till(self):
-        self.pub.increase_till(2.5)
-        self.assertEqual(102.5, self.pub.till)
+        drink = Drink("Gin and tonic", 5)
+        self.pub.increase_till(drink)
+        self.assertEqual(105, self.pub.till)
     
     def test_check_age_old_enough(self):
         customer = Customer("Dave",130, 54)

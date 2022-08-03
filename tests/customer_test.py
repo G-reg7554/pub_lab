@@ -16,9 +16,9 @@ class TestCustomer(unittest.TestCase):
         self.assertEqual(45, self.customer1.wallet)
         self.assertEqual(105, pub.till)
 
-    # def test_buy_drink_too_young(self):
-    #     pub = Pub("The Prancing Pony", 100)
-    #     drink = Drink("Gin and tonic", 5)
-    #     self.customer2.buy_drink(drink, pub)
-    #     self.assertEqual(30, self.customer2.wallet)
-    #     self.assertEqual(100, pub.till)
+    def test_buy_drink_too_young(self):
+        pub = Pub("The Prancing Pony", 100)
+        drink = Drink("Gin and tonic", 5)
+        self.customer2.buy_drink(drink, pub)
+        self.assertEqual(30, self.customer2.wallet)
+        self.assertEqual(100, pub.till)
